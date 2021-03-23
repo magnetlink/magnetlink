@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Magnet to clickable link using JS</title>
+
+    <script>
+        const queryString = window.location.search;
+        console.log(queryString);
+        const urlParams = new URLSearchParams(queryString);
+
+        const hash = urlParams.get('hash');
+        console.log("\"" + hash + "\"");
+        if (hash != null && hash != "")
+            window.open("magnet:?xt=urn:btih:" + hash, "_self");
+    </script>
+</head>
+
+<body>
+    <h1>Magnet URL to HTTP Link</h1>
+    <p>1. use https://magnetlink.github.io/magnetlink/?hash=<b>hash</b></p>
+</body>
+
+</html>
